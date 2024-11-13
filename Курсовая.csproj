@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2938475-88B1-4925-B195-10C76840F5F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Курсовая</RootNamespace>
+    <AssemblyName>Курсовая</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddFilmOnDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFilmOnDisc.Designer.cs">
+      <DependentUpon>AddFilmOnDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGenreOnFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGenreOnFilm.Designer.cs">
+      <DependentUpon>AddGenreOnFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDisc.Designer.cs">
+      <DependentUpon>ChangeDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeFilm.Designer.cs">
+      <DependentUpon>ChangeFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeGenre.Designer.cs">
+      <DependentUpon>ChangeGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckRental.Designer.cs">
+      <DependentUpon>CheckRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conection.cs" />
+    <Compile Include="DiscPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscPrice.Designer.cs">
+      <DependentUpon>DiscPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscReturnAndUserForDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscReturnAndUserForDate.Designer.cs">
+      <DependentUpon>DiscReturnAndUserForDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmInfo.Designer.cs">
+      <DependentUpon>FilmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmOnGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmOnGenre.Designer.cs">
+      <DependentUpon>FilmOnGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder.Designer.cs">
+      <DependentUpon>Finder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enter.Designer.cs">
+      <DependentUpon>Enter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllDisc.Designer.cs">
+      <DependentUpon>AllDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscWithChooseFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscWithChooseFilm.Designer.cs">
+      <DependentUpon>DiscWithChooseFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rent.Designer.cs">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRentDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRentDisc.Designer.cs">
+      <DependentUpon>UserRentDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registr.Designer.cs">
+      <DependentUpon>Registr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUser.Designer.cs">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddFilmOnDisc.resx">
+      <DependentUpon>AddFilmOnDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGenreOnFilm.resx">
+      <DependentUpon>AddGenreOnFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllDisc.resx">
+      <DependentUpon>AllDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDisc.resx">
+      <DependentUpon>ChangeDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeFilm.resx">
+      <DependentUpon>ChangeFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeGenre.resx">
+      <DependentUpon>ChangeGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckRental.resx">
+      <DependentUpon>CheckRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscPrice.resx">
+      <DependentUpon>DiscPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscReturnAndUserForDate.resx">
+      <DependentUpon>DiscReturnAndUserForDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscWithChooseFilm.resx">
+      <DependentUpon>DiscWithChooseFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmInfo.resx">
+      <DependentUpon>FilmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmOnGenre.resx">
+      <DependentUpon>FilmOnGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder.resx">
+      <DependentUpon>Finder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enter.resx">
+      <DependentUpon>Enter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registr.resx">
+      <DependentUpon>Registr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rent.resx">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRentDisc.resx">
+      <DependentUpon>UserRentDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUser.resx">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Videoprokat.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
